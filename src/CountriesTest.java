@@ -200,52 +200,11 @@ public class CountriesTest {
 
     }
 
-    @Test
-    public void getTotal1() {
-
-        String myNum = "5421312341";
 
 
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = 10;
 
 
-        Assert.assertTrue(myTotal == expected);
 
-
-    }
-
-    @Test
-    public void getTotal2() {
-
-        String myNum = "5654656213";
-
-
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = 29;
-
-
-        Assert.assertTrue(myTotal == expected);
-
-
-    }
-
-    @Test
-    public void getTotal3() {
-
-        String myNum = "00000000000";
-
-
-        int myTotal = c1.getTotal(myNum);
-
-        int expected = -1;
-
-
-        Assert.assertTrue(myTotal == expected);
-
-    }
 
     @Test
     public void isfirstArrayListContainssecondArrayList1() {
@@ -383,19 +342,19 @@ public class CountriesTest {
 
     @Test
     public void replaceTheCountry3() {
-        ArrayList<String> myCount = new ArrayList<>();
+        ArrayList<String> myCountries = new ArrayList<>();
 
-        myCount.add("Finland");
-        myCount.add("USA");
-        myCount.add("Germany");
-        myCount.add("Finland");
-        myCount.add("USA");
+        myCountries.add("Finland");
+        myCountries.add("USA");
+        myCountries.add("Germany");
+        myCountries.add("Finland");
+        myCountries.add("USA");
 
-        String first = "South Africa";
-        String second = "Italy";
+        String firstCountry = "South Africa";
+        String SecondCounry = "Italy";
 
 
-        ArrayList<String> Actual = c1.replaceTheCountry(myCount, first, second);
+        ArrayList<String> Actual = c1.replaceTheCountry(myCountries, firstCountry, SecondCounry);
 
         ArrayList<String> Expected = new ArrayList<>();
 
@@ -408,7 +367,6 @@ public class CountriesTest {
         for (int i = 0; i < Expected.size(); i++) {
 
             Assert.assertTrue(Actual.get(i).equals(Expected.get(i)));
-
 
         }
 
@@ -447,7 +405,7 @@ public class CountriesTest {
     @Test
     public void middleCharater1() {
 
-        char i1 = c1.middleCharater("HeyDude");
+        char i1 = c1.middleCharacter("HeyDude");
 
         Assert.assertTrue(i1 == 'D');
 
@@ -456,7 +414,7 @@ public class CountriesTest {
     @Test
     public void middleCharater2() {
 
-        char i1 = c1.middleCharater("Cerry");
+        char i1 = c1.middleCharacter("Cerry");
 
         Assert.assertTrue(i1 == 'r');
 
@@ -466,16 +424,16 @@ public class CountriesTest {
     @Test
     public void middleCharater3() {
 
-        char i1 = c1.middleCharater("Ring");
+        char i1 = c1.middleCharacter("Ring");
 
-        Assert.assertTrue(i1 == '0');
+        Assert.assertTrue(i1 == 10);
 
     }
 
     @Test
     public void dayoftheWeek1() {
 
-        String i1 = c1.dayoftheWeek(1);
+        String i1 = c1.dayOfTheWeek(1);
 
         Assert.assertTrue(i1.equals("Monday"));
 
@@ -485,7 +443,7 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek2() {
 
-        String i1 = c1.dayoftheWeek(5);
+        String i1 = c1.dayOfTheWeek(5);
 
         Assert.assertTrue(i1.equals("Friday"));
 
@@ -495,16 +453,16 @@ public class CountriesTest {
     @Test
     public void dayoftheWeek3() {
 
-        String i1 = c1.dayoftheWeek(0);
+        String i1 = c1.dayOfTheWeek(0);
 
         Assert.assertTrue(i1.equals("this is not a expected input"));
 
     }
 
     @Test
-    public void dayoftheWeek4() {
+    public void dayOfTheWeek() {
 
-        String i1 = c1.dayoftheWeek(12);
+        String i1 = c1.dayOfTheWeek(12);
 
         Assert.assertTrue(i1.equals("this is not a expected input"));
 
